@@ -1,0 +1,40 @@
+/* 全局css文件 */
+
+/* 默认字体颜色 */
+.f_color {
+	color: #636263;
+}
+
+/* 默认字体选中 */
+.f_active_color {
+	color: #49bdfb;
+}
+
+/* 背景颜色 */
+.bg_color {
+	background: #42b7fb;
+}
+
+/* #ifdef H5 */
+uni-page-head {
+	display: none;
+}
+
+/* #endif */
+
+/* title */
+.title {
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f1f1f1;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+}
+
+.title .iconfont {
+	font-size: 40rpx;
+	color: #333333;
+}

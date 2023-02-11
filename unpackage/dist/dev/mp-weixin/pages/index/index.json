@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "index-swiper": "../../components/index/IndexSwiper",
+    "recommended": "../../components/index/Recommended",
+    "commodity-list": "../../components/public/CommodityList"
+  }
+}
