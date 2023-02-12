@@ -3,13 +3,16 @@
     "pages/index/index",
     "pages/user/user",
     "pages/news/news",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/search/search"
   ],
   "window": {
     "navigationBarTextStyle": "black",
+    "scrollIndicator": "none",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "default"
   },
   "tabBar": {
     "color": "#7A7E83",

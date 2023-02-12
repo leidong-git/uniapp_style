@@ -3,18 +3,16 @@
 		width: 100%;
 		height: auto;
 		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
 		color: #434343;
 }
 .commodity_list.data-v-fc9b6790 {
-		width: 50%;
 		height: auto;
 		margin-bottom: 20rpx;
+		display: flex;
+		flex-direction: column;
 }
 .commodity_list .commodity_img.data-v-fc9b6790 {
 		width: 100%;
-		height: 300rpx;
 }
 .commodity_list .commodity_detail.data-v-fc9b6790 {
 		width: 100%;

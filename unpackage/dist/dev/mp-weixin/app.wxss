@@ -13,11 +13,6 @@
 .bg_color {
 	background: #42b7fb;
 }
-
-
-
-
-
 	/* title */
 .title {
 	width: 100%;
@@ -32,6 +27,21 @@
 .title .iconfont {
 	font-size: 40rpx;
 	color: #333333;
+}
+	/* 去除滚动条 */
+ ::-webkit-scrollbar{
+	display:none;
+	width: 0rpx !important;
+	height: 0rpx !important;
+	-webkit-appearance: none;
+	background: transparent;
+}
+ body::-webkit-scrollbar{
+	display:none;
+	width: 0rpx !important;
+	height: 0rpx !important;
+	-webkit-appearance: none;
+	background: transparent;
 }
 @font-face {
   font-family: "iconfont"; /* Project id 3889128 */

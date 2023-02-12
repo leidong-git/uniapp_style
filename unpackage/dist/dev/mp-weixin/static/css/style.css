@@ -15,13 +15,6 @@
 	background: #42b7fb;
 }
 
-/* #ifdef H5 */
-uni-page-head {
-	display: none;
-}
-
-/* #endif */
-
 /* title */
 .title {
 	width: 100%;
@@ -37,4 +30,21 @@ uni-page-head {
 .title .iconfont {
 	font-size: 40rpx;
 	color: #333333;
+}
+
+/* 去除滚动条 */
+/deep/::-webkit-scrollbar{
+	display:none;
+	width: 0rpx !important;
+	height: 0rpx !important;
+	-webkit-appearance: none;
+	background: transparent;
+}
+
+/deep/body::-webkit-scrollbar{
+	display:none;
+	width: 0rpx !important;
+	height: 0rpx !important;
+	-webkit-appearance: none;
+	background: transparent;
 }

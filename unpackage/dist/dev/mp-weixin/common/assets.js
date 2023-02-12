@@ -1,10 +1,10 @@
 "use strict";
-const _imports_0$1 = "/static/image/scenic_sj.png";
-const _imports_1$1 = "/static/image/scenic_sj1.png";
-const _imports_0 = "/static/image/big.jpg";
-const _imports_1 = "/static/image/1.jpg";
-const _imports_2 = "/static/image/2.jpg";
 const _imports_3 = "/static/image/3.jpg";
+const _imports_1$1 = "/static/image/1.jpg";
+const _imports_0$1 = "/static/image/scenic_sj.png";
+const _imports_1 = "/static/image/scenic_sj1.png";
+const _imports_0 = "/static/image/big.jpg";
+const _imports_2 = "/static/image/2.jpg";
 exports._imports_0 = _imports_0$1;
 exports._imports_0$1 = _imports_0;
 exports._imports_1 = _imports_1$1;
