@@ -1,4 +1,7 @@
 /* 全局css文件 */
+html {
+	font-size: 25rpx;
+}
 
 /* 默认字体颜色 */
 .f_color {
@@ -33,16 +36,16 @@
 }
 
 /* 去除滚动条 */
-/deep/::-webkit-scrollbar{
-	display:none;
+/deep/::-webkit-scrollbar {
+	display: none;
 	width: 0rpx !important;
 	height: 0rpx !important;
 	-webkit-appearance: none;
 	background: transparent;
 }
 
-/deep/body::-webkit-scrollbar{
-	display:none;
+/deep/body::-webkit-scrollbar {
+	display: none;
 	width: 0rpx !important;
 	height: 0rpx !important;
 	-webkit-appearance: none;

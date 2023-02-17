@@ -13,18 +13,47 @@
 				}
 			}
 		},{
+		    "path" : "pages/types/types",
+			"style" :
+			{
+			    "navigationBarTitleText": "",
+			    "enablePullDownRefresh": false,
+				"autoBackButton":false,
+				"h5": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						// 原生搜索
+						"searchInput": {
+							"autoFocus": false, // 是否自动获取焦点
+							"disabled": true,
+							"align": "center",
+							"borderRadius": "15px",
+							"backgroundColor": "#fff",
+							"placeholder": "请输入关键字",
+							"placeholderColor": "#B3B3B3"
+						}
+					}
+				}
+			}
+		},{
             "path" : "pages/user/user"
         },{
-		    "path" : "pages/news/news"
-		},{
-            "path" : "pages/cart/cart"
+            "path" : "pages/cart/cart",
+			"style":{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"scrollIndicator": "none",
+					"titleNView": false
+				}
+			}
         }
         ,{
-            "path" : "pages/search/search",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
+			"path" : "pages/search/search",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"h5": {
 					"scrollIndicator": "none",
 					"titleNView": {
@@ -34,7 +63,7 @@
 							"disabled": false,
 							"align": "left",
 							"borderRadius": "15px",
-							"backgroundColor": "#F7F7F7",
+							"backgroundColor": "#fff",
 							"placeholder": "请输入关键字",
 							"placeholderColor": "#B3B3B3"
 						},
@@ -47,8 +76,61 @@
 						]
 					}
 				}
-            }
-        }
+			}
+		}
+		,{
+			"path" : "pages/search/search_list",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						// 原生搜索
+						"searchInput": {
+							"disabled": false,
+							"align": "left",
+							"borderRadius": "15px",
+							"backgroundColor": "##fff",
+							"placeholder": "请输入关键字",
+							"placeholderColor": "#B3B3B3"
+						},
+						"buttons": [ // 右边
+							{
+								"float": "right", // 右边
+								"text": "筛选",
+								"fontSize": "14px"
+							}
+						]
+					}
+				}
+			}
+			
+		}
+		,{
+			"path" : "pages/types/types_detail",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"scrollIndicator": "none",
+					"titleNView": {
+						// 原生搜索
+						"type": "transparent",
+						"buttons": [ // 右边
+							{
+								"type":"menu"
+							},{
+								"type":"share"
+							}
+						]
+					}
+				}
+			}
+			
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -74,7 +156,7 @@
 			"selectedIconPath":"static/icon/home-active.png"
 		},{
 			"text":"分类",
-			"pagePath":"pages/news/news",
+			"pagePath":"pages/types/types",
 			"iconPath":"static/icon/list.png",
 			"selectedIconPath":"static/icon/list-active.png"
 		},{
