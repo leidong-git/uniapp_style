@@ -17,7 +17,7 @@
 					<text class="title_name">
 						{{item.title}}
 					</text>
-					<i @click="Remove_show()" :class="`iconfont ${item.remove}`"></i>
+					<i @click="Remove_show()" class="iconfont" :class="item.remove"></i>
 				</view>
 				<view class="list_tag">
 					<view class="tag_name" v-for="(item1,index1) in item.tag_list" :key="index1">

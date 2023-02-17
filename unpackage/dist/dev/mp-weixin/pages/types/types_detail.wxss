@@ -1,0 +1,213 @@
+
+.type_cont.data-v-4e13fb34 {
+	padding-bottom: 90rpx;
+}
+.type_introduce.data-v-4e13fb34 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 50rpx;
+	box-sizing: border-box;
+}
+.type_introduce .new_pic.data-v-4e13fb34 {
+	width: 100%;
+	height: 60rpx;
+	color: #434343;
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 34rpx;
+}
+.type_introduce .old_pic.data-v-4e13fb34 {
+	width: 100%;
+	height: 60rpx;
+	color: #ccc;
+	text-align: center;
+	line-height: 60rpx;
+	text-decoration: line-through;
+	font-size: 34rpx;
+}
+.type_introduce .pic_name.data-v-4e13fb34 {
+	width: 100%;
+	height: auto;
+	color: #434343;
+	text-align: center;
+	line-height: 50rpx;
+	font-size: 28rpx;
+}
+.type_introduce .pic_goods.data-v-4e13fb34 {
+	width: 100%;
+	display: flex;
+	line-height: 60rpx;
+	justify-content: center;
+	font-size: 24rpx;
+}
+.pic_goods .goods_list.data-v-4e13fb34 {
+	margin: 0 20rpx;
+	display: flex;
+}
+.type_del.data-v-4e13fb34 {
+	width: 100%;
+	height: auto;
+	margin: 20rpx 0;
+}
+.type_del .type_del_item.data-v-4e13fb34 {
+	width: 100%;
+	height: 400rpx;
+}
+.type_del_item .item_img.data-v-4e13fb34 {
+	width: 100%;
+	height: 400rpx;
+}
+.card_list.data-v-4e13fb34 {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box
+}
+.card_title.data-v-4e13fb34 {
+	width: 100%;
+	display: flex;
+	height: 60rpx;
+	align-items: center;
+	justify-content: center;
+	color: #434343;
+	font-weight: 600;
+	font-size: 30rpx;
+	margin: 20rpx 0;
+}
+.shopping_cart.data-v-4e13fb34 {
+	width: 100%;
+	height: 90rpx;
+	display: flex;
+	justify-content: space-around;
+	background: #fff;
+	border-top: 2rpx solid #ccc;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	z-index: 100;
+}
+.shopping_cart .iconfont.data-v-4e13fb34 {
+	width: 55rpx;
+	height: 55rpx;
+	border-radius: 100rpx;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	line-height: 55rpx;
+	text-align: center;
+	font-size: 35rpx;
+}
+.shopping_cart button.data-v-4e13fb34 {
+	width: 200rpx;
+	height: 50rpx;
+	border-radius: 50rpx;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	line-height: 50rpx;
+	text-align: center;
+	font-size: 26rpx;
+	margin: 0;
+}
+.shopping_cart .add_cart.data-v-4e13fb34 {
+	background: rgba(0, 0, 0, 0.6);
+}
+.shopping_cart .shopping.data-v-4e13fb34 {
+	background: #42b7fb;
+}
+.shopping_popup.data-v-4e13fb34 {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: 101;
+}
+.popup_mark.data-v-4e13fb34 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.32);
+	z-index: 101;
+}
+.popup_cont.data-v-4e13fb34 {
+	width: 100%;
+	background: #fff;
+	height: 740rpx;
+	position: absolute;
+	bottom: -800rpx;
+	z-index: 102;
+	padding: 20rpx;
+	box-sizing: border-box;
+}
+.popup_cont .popup_detail.data-v-4e13fb34 {
+	width: 100%;
+	height: 180rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.popup_detail .detail_img.data-v-4e13fb34 {
+	width: 250rpx;
+	height: 250rpx;
+	position: relative;
+	top: -80rpx;
+	border-radius: 5px;
+}
+.popup_detail .detail_pic.data-v-4e13fb34 {
+	width: 350rpx;
+	height: auto;
+	line-height: 50rpx;
+	display: flex;
+	flex-direction: column;
+	font-size: 28rpx;
+}
+.detail_pic .new_pic.data-v-4e13fb34 {
+	font-size: 35rpx;
+}
+.popup_detail .iconfont.data-v-4e13fb34 {
+	font-size: 45rpx;
+	color: #aaa;
+}
+.popup_color.data-v-4e13fb34 {
+	width: 100%;
+	height: auto;
+}
+.popup_title.data-v-4e13fb34 {
+	font-size: 32rpx;
+	color: #434343;
+}
+.color_cont.data-v-4e13fb34 {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20rpx 0 10rpx 0;
+}
+.color_cont .color_item.data-v-4e13fb34 {
+	margin-left: 10rpx;
+	margin-bottom: 10rpx;
+	border-radius: 50rpx;
+	line-height: 50rpx;
+	background: #ccc;
+	color: #fff;
+	padding: 0 30rpx;
+	height: 50rpx;
+	font-size: 26rpx;
+}
+.color_cont .color_item.active.data-v-4e13fb34 {
+	background: #42b7fb;
+}
+.popup_num.data-v-4e13fb34 {
+	display: flex;
+	justify-content: space-between;
+	height: 100rpx;
+	align-items: center;
+}
+.popup_qd.data-v-4e13fb34 {
+	width: 100%;
+	height: 70rpx;
+	background: #42b7fb;
+	color: #fff;
+	font-size: 30rpx;
+	line-height: 70rpx;
+	margin-top: 100rpx;
+}
+

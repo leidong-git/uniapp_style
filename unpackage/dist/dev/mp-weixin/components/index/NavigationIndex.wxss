@@ -1,15 +1,16 @@
 
-.nav_cont.data-v-04cd3292{
+.nav_cont.data-v-3b3a85d4{
 	width: 100%;
 	white-space: nowrap;
 }
-.nav_item.data-v-04cd3292{
+.nav_item.data-v-3b3a85d4{
 	padding:25rpx;
 	height: 40rpx;
 	display: inline-block;
 }
-.f_active_color.data-v-04cd3292{
+.f_active_color.data-v-3b3a85d4{
 	width: auto;
 	border-bottom: 4rpx solid #49bdfb;
 	padding-bottom: 10rpx;
 }
+

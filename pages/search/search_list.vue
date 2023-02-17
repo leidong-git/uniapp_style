@@ -21,7 +21,7 @@
 			</view>
 		</view>
 
-		<scroll-view scroll-y="true" :style="`height:${search_height}`">
+		<scroll-view scroll-y="true" :style="'height:'+search_height">
 			<CommodityList :commodity_data="commodity_data"></CommodityList>
 		</scroll-view>
 	</view>

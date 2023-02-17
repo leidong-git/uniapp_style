@@ -1,0 +1,100 @@
+
+.search_title.data-v-4cedc0c6 {
+	width: 100%;
+	height: 90rpx;
+	background-color: #f1f1f1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search_title_list.data-v-4cedc0c6 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+	height: 60rpx;
+	width: calc(100% - 60rpx);
+	background-color: #ffffff;
+	border-radius: 35rpx;
+}
+.search_title_list ._i.data-v-4cedc0c6 {
+	height: 55rpx;
+	width: 55rpx;
+	font-size: 45rpx;
+}
+.search_title_list input.data-v-4cedc0c6 {
+	width: calc(100% - 165rpx);
+}
+.search_title_list .search_btn.data-v-4cedc0c6 {
+	height: 45rpx;
+	width: 110rpx;
+	border-radius: 55rpx;
+	background-color: #6cd3ff;
+	color: #ffffff;
+	font-size: 30rpx;
+	text-align: center;
+	line-height: 45rpx;
+	cursor: pointer;
+}
+.search_list_cont.data-v-4cedc0c6 {
+	width: 100%;
+	height: auto;
+}
+.search_list_cont .search_list.data-v-4cedc0c6 {
+	width: 100%;
+	height: auto;
+}
+.search_list .list_title.data-v-4cedc0c6 {
+	width: 100%;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+	height: 80rpx;
+	line-height: 80rpx;
+	color: #434343;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.list_title .title_name.data-v-4cedc0c6 {
+	font-size: 30rpx;
+}
+.list_title .iconfont.data-v-4cedc0c6 {
+	font-size: 34rpx;
+}
+.search_list .list_tag.data-v-4cedc0c6 {
+	width: 100%;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+	height: auto;
+	color: #434343;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.list_tag .tag_name.data-v-4cedc0c6 {
+	height: 50rpx;
+	line-height: 50rpx;
+	padding: 0 20rpx;
+	background: #f1f1f1;
+	color: #aaa;
+	border-radius: 100rpx;
+	margin: 10rpx 0rpx;
+	margin-right: 20rpx;
+	position: relative;
+}
+.tag_name .icon_remove.data-v-4cedc0c6 {
+	width: 30rpx;
+	height: 30rpx;
+	line-height: 25rpx;
+	text-align: center;
+	font-style: initial;
+	position: absolute;
+	top: -25%;
+	right: -10%;
+	background: rgba(255, 0, 0, 0.5);
+	border-radius: 100rpx;
+	color: #fff;
+	z-index: 100;
+}
+

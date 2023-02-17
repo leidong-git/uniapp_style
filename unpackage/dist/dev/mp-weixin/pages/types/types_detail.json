@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "index-swiper": "/components/index/IndexSwiper",
+    "commodity-list": "/components/public/CommodityList",
+    "uninumberbox": "/components/uni/uni-number-box/uni-number-box"
+  }
+}

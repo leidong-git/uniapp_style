@@ -1,7 +1,7 @@
 <template>
-	<view class="commodity_cont" :style="`flex-wrap:${wrap}`">
-		<view class="commodity_list" :style="`width:${itemW}`" v-for="(item,index) in commodity_data" :key="index">
-			<image class="commodity_img" :style="`height:${itemH}`" :src="`../../static/image/${item.img}`"></image>
+	<view class="commodity_cont" :style="'flex-wrap:'+ wrap">
+		<view class="commodity_list" :style="'width:'+itemW" v-for="(item,index) in commodity_data" :key="index">
+			<image class="commodity_img" :style="'height:'+itemH" :src="'../../static/image/'+item.img"></image>
 			<view class="commodity_detail">
 				<view class="detail">{{item.detail}}</view>
 				<view class="price">
@@ -18,22 +18,22 @@
 	export default {
 		props: {
 			commodity_data: Array,
-			itemW:{
+			itemW: {
 				type: String,
-				default:"375rpx",
+				default: "375rpx",
 			},
-			itemH:{
+			itemH: {
 				type: String,
-				default:"375rpx",
+				default: "375rpx",
 			},
-			wrap:{
+			wrap: {
 				type: String,
-				default:"wrap",
+				default: "wrap",
 			}
 		},
 		data() {
 			return {
-				
+
 			}
 		},
 		methods: {
