@@ -161,10 +161,7 @@
 		onLoad() {
 			uni.getSystemInfo({
 				success: (res) => {
-					console.log(this.Get_type_height());
-					console.log(res.windowHeight);
 					this.swiper_height = res.windowHeight - uni.upx2px(90) - this.Get_type_height() + 'px'
-					console.log(this.swiper_height);
 				}
 			})
 		},

@@ -16,13 +16,15 @@
 		<view class="cart_cont">
 			<view class="cart_list" v-for="(item,index) in cart_data" :key="index">
 				<view class="cart_list_title">
-					<checkbox class="store_checked" checked="true" />
+					<checkbox class="store_checked" @click="SelectChildAll(index,item.checked)"
+						:checked="item.checked" />
 					<image class="store_icon" :src="`../../static/icon/${item.store_icon}`"></image>
 					<text class="store_name">{{item.store_name}}</text>
 				</view>
 				<view class="cart_list_page">
-					<view class="list_page" v-for="(item1,index) in item.page_list">
-						<checkbox class="store_checked" :checked="item1.checked" :id="item1.id" />
+					<view class="list_page" v-for="(item1,index1) in item.page_list" :key="index1">
+						<checkbox class="store_checked" @click="SelectSunAll(index,index1,item1.checked)"
+							:checked="item1.checked" :id="item1.id" />
 						<label class="store_label" :for="item1.id">
 							<image class="page_img" :src="`../../static/image/Types/${item1.com_img}`"></image>
 							<view class="page_detail">
@@ -39,15 +41,16 @@
 			</view>
 
 			<view class="cart_sta">
-				<view class="sta_left" @click="SelectAll()">
-					<checkbox class="store_checked" :checked="sta_data.sta_checked" id="sta" />
+				<view class="sta_left">
+					<checkbox class="store_checked" @click="SelectAll()" :checked="sta_data.sta_checked" id="sta" />
 					<label class="store_label" for="sta">
 						全选
 					</label>
 				</view>
 				<view class="sta_right">
 					<view class="sta_dea">
-						<view class="sta_dea_text">合计：<i>¥{{sta_data.sta_pic}}</i></view>
+						<view class="sta_dea_text">合计：<i>¥{{sta_data.sta_pic}}</i>
+						</view>
 						<view class="sta_dea_fre">{{sta_data.sta_freight ? '含运费':'不含运费'}}</view>
 					</view>
 					<button class="sta_an">结算({{sta_data.sta_num}})</button>
@@ -60,9 +63,8 @@
 <script>
 	import UniNavBar from '@/components/uni/uni-nav-bar/uni-nav-bar.vue'
 	import {
-		mapState,
-		mapActions
-	} from "vuex"
+		mapState
+	} from 'vuex'
 	export default {
 		data() {
 			return {
@@ -76,7 +78,25 @@
 			...mapState({
 				cart_data: state => state.cart.cart_data,
 				sta_data: state => state.cart.sta_data
-			})
+			}),
+		},
+		watch: {
+			cart_data: {
+				handler(newVal, oldVal) {
+					let pic = 0
+
+					newVal.forEach((item, index) => {
+						item.page_list.forEach(item1 => {
+							if (item1.checked) {
+								pic = (item1.com_price * item1.com_num) + pic
+							}
+						})
+					})
+
+					this.$store.commit('SelectPrice', pic)
+				},
+				deep: true,
+			}
 		},
 		methods: {
 			// 点击信息
@@ -86,10 +106,24 @@
 				})
 			},
 
-			// 全选
-			...mapActions({
-				SelectAll: 'SelectAll'
-			}),
+			SelectAll(index) {
+				this.$store.commit('SelectAll', index)
+			},
+
+			SelectChildAll(index, code) {
+				this.$store.commit('SelectChildAll', {
+					code: code,
+					index: index
+				})
+			},
+
+			SelectSunAll(index, index1, code) {
+				this.$store.commit('SelectSunAll', {
+					index: index,
+					Cindex: index1,
+					code: code
+				})
+			}
 		}
 	}
 </script>

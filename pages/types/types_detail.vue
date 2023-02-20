@@ -39,7 +39,8 @@
 					<view class="popup_title">颜色分类</view>
 					<view class="color_cont">
 						<view class="color_item" :class="introduce_active == index ? 'active':''"
-							@click="Color_item(index,item.name)" v-for="(item,index) in introduce.color_cont">
+							@click="Color_item(index,item.name)" v-for="(item,index) in introduce.color_cont"
+							:key="index">
 							{{item.name}}
 						</view>
 					</view>

@@ -15,12 +15,13 @@
 		<view class="types_cont">
 			<scroll-view scroll-y="true" :style="'height:'+window_height" class="types_left">
 				<view class="types_left_item" @click="Types_left_item(index)"
-					:class="types_title_active == index ? 'types_left_active':''" v-for="(item,index) in types_title">
+					:class="types_title_active == index ? 'types_left_active':''" v-for="(item,index) in types_title"
+					:key="index">
 					{{item.name}}
 				</view>
 			</scroll-view>
 			<scroll-view scroll-y="true" :style="'height:'+window_height" class="types_right">
-				<view class="types_list" v-for="(item,index) in types_list">
+				<view class="types_list" v-for="(item,index) in types_list" :key="index">
 					<view class="types_right_title">{{item.title}}</view>
 					<view class="type_list_cont">
 						<view class="cont_list" v-for="(item1,index1) in item.list" :key="index1"
