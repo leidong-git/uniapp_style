@@ -2,6 +2,8 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "uni-nav-bar": "/components/uni/uni-nav-bar/uni-nav-bar"
+    "uni-nav-bar": "/components/uni/uni-nav-bar/uni-nav-bar",
+    "uninumberbox": "/components/uni/uni-number-box/uni-number-box",
+    "uni-icons": "/components/uni/uni-icons/uni-icons"
   }
 }

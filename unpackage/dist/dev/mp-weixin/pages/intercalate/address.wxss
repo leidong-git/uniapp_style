@@ -1,0 +1,59 @@
+.address.data-v-54b4a148 {
+  width: 100%;
+  height: calc(100vh - 90rpx);
+  background: #f1f1f1;
+}
+.address .address_cont.data-v-54b4a148 {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.address .address_cont .address_list.data-v-54b4a148 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #fff;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #f2f2f2;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  border-radius: 5px;
+  float: left;
+}
+.address .address_cont .address_list .list_column.data-v-54b4a148 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.address .address_cont .address_list .list_column view.data-v-54b4a148 {
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.address .address_cont .address_list .list_column .default.data-v-54b4a148 {
+  background: #42b7fb;
+  border-radius: 100px;
+  color: #fff;
+  padding: 0 20rpx;
+  height: 40rpx;
+}
+.address .address_add.data-v-54b4a148 {
+  width: 50%;
+  height: 70rpx;
+  background: rgba(200, 100, 100, 0.8);
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  margin: 40rpx 25%;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+

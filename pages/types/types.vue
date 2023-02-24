@@ -26,7 +26,7 @@
 					<view class="type_list_cont">
 						<view class="cont_list" v-for="(item1,index1) in item.list" :key="index1"
 							@click="List_detail(item1.id)">
-							<image class="list_cont_img" :src="`/static/image/types/${item1.img}`"></image>
+							<image class="list_cont_img" :src="`/static/image/Types/${item1.img}`"></image>
 							<text class="list_cont_text">{{item1.name}}</text>
 						</view>
 					</view>

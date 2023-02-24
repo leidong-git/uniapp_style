@@ -27,7 +27,7 @@
 			<view class="popup_mark" @tap="Hide_shopping()"></view>
 			<view class="popup_cont" :animation="animationData">
 				<view class="popup_detail">
-					<image class="detail_img" src="../../static/image/3.jpg"></image>
+					<image class="detail_img" :src="'/static/image/Types/'+introduce.img"></image>
 					<view class="detail_pic">
 						<view class="new_pic f_active_color">¥{{introduce.n_pic}}</view>
 						<view class="old_pic">可购 {{introduce.total}}</view>
@@ -73,9 +73,13 @@
 		data() {
 			return {
 				introduce: {
+					id: '121221',
+					store_name: '女士精品店铺',
+					store_icon: 'my-active.png',
 					o_pic: '124.00',
 					n_pic: '94.50',
 					name: '[自营] Kappa/卡帕 女款运动长裤休闲裤卫裤K0922AK42-844',
+					img: '3.jpg',
 					goods: '7天无理由',
 					time: '48小时内发货',
 					total: 100,
@@ -208,8 +212,25 @@
 
 			// 确定购买
 			Popup_buy() {
-				uni.showToast({
-					title: `购买详情：颜色${this.introduce.color_type},数量:${this.introduce.number},名称：${this.introduce.name}`,
+				let data = {
+					store_name: this.introduce.store_name,
+					store_icon: this.introduce.store_icon,
+					checked: false,
+					page_list: [{
+						id: this.introduce.id,
+						checked: false,
+						com_name: this.introduce.name,
+						com_img: this.introduce.img,
+						com_color: this.introduce.color_type,
+						com_price: this.introduce.o_pic,
+						com_num: this.introduce.number,
+					}]
+				}
+
+				this.$store.commit('AddItem', data)
+
+				uni.switchTab({
+					url: `/pages/cart/cart`
 				})
 			},
 

@@ -143,22 +143,22 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var NavigationIndex = function NavigationIndex() {
   __webpack_require__.e(/*! require.ensure | components/index/NavigationIndex */ "components/index/NavigationIndex").then((function () {
-    return resolve(__webpack_require__(/*! @/components/index/NavigationIndex.vue */ 90));
+    return resolve(__webpack_require__(/*! @/components/index/NavigationIndex.vue */ 92));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var IndexSwiper = function IndexSwiper() {
   __webpack_require__.e(/*! require.ensure | components/index/IndexSwiper */ "components/index/IndexSwiper").then((function () {
-    return resolve(__webpack_require__(/*! @/components/index/IndexSwiper.vue */ 97));
+    return resolve(__webpack_require__(/*! @/components/index/IndexSwiper.vue */ 99));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var Recommended = function Recommended() {
   __webpack_require__.e(/*! require.ensure | components/index/Recommended */ "components/index/Recommended").then((function () {
-    return resolve(__webpack_require__(/*! @/components/index/Recommended.vue */ 104));
+    return resolve(__webpack_require__(/*! @/components/index/Recommended.vue */ 106));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var CommodityList = function CommodityList() {
   __webpack_require__.e(/*! require.ensure | components/public/CommodityList */ "components/public/CommodityList").then((function () {
-    return resolve(__webpack_require__(/*! @/components/public/CommodityList.vue */ 111));
+    return resolve(__webpack_require__(/*! @/components/public/CommodityList.vue */ 113));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -231,10 +231,7 @@ var _default = {
     var _this = this;
     uni.getSystemInfo({
       success: function success(res) {
-        console.log(_this.Get_type_height());
-        console.log(res.windowHeight);
         _this.swiper_height = res.windowHeight - uni.upx2px(90) - _this.Get_type_height() + 'px';
-        console.log(_this.swiper_height);
       }
     });
   },

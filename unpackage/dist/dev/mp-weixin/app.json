@@ -6,7 +6,10 @@
     "pages/cart/cart",
     "pages/search/search",
     "pages/search/search_list",
-    "pages/types/types_detail"
+    "pages/types/types_detail",
+    "pages/intercalate/intercalate",
+    "pages/intercalate/address",
+    "pages/intercalate/address_form"
   ],
   "subPackages": [],
   "window": {
@@ -49,6 +52,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

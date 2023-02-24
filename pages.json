@@ -36,7 +36,15 @@
 				}
 			}
 		},{
-            "path" : "pages/user/user"
+            "path" : "pages/user/user",
+			"style":{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"h5": {
+					"scrollIndicator": "none",
+					"titleNView": false
+				}
+			}
         },{
             "path" : "pages/cart/cart",
 			"style":{
@@ -131,6 +139,151 @@
 			}
 			
 		}
+        ,{
+            "path" : "pages/intercalate/intercalate",
+            "style" :
+            {
+            	"navigationBarTitleText": "设置",
+            	"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ // 右边
+            				{
+            					"type":"menu"
+            				}
+            			]
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/intercalate/address",
+            "style" :
+            {
+            	"navigationBarTitleText": "地址管理",
+            	"enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ // 右边
+            				{
+            					"float": "right", // 右边
+            					"text": "编辑",
+            					"fontSize": "14px"
+            				}
+            			]
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/intercalate/address_form",
+            "style" :
+            {
+            	"navigationBarTitleText": "新增地址",
+            	"enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ // 右边
+            				{
+            					"float": "right", // 右边
+            					"text": "保存",
+            					"fontSize": "14px"
+            				}
+            			]
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/intercalate/my_goods",
+            "style" :
+            {
+            	"navigationBarTitleText": "我的订单",
+            	"enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ // 右边
+            				{
+            					"type":"menu"
+            				}
+            			]
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/cart/goods_affirm",
+            "style" :
+            {
+            	"navigationBarTitleText": "确认订单",
+            	"enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ // 右边
+            				{
+            					"type":"menu"
+            				}
+            			]
+            		}
+            	}
+            }
+            
+        }
+        ,{
+            "path" : "pages/paymont/paymont",                                                                                 
+            "style" :
+            {
+            	"navigationBarTitleText": "确认支付",
+            	"enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ 
+            				{
+            					"float": "left", // 右边
+            					"type":"close"
+            				}
+            			]
+            		}
+            	}
+            }
+        }
+        ,{
+            "path" : "pages/paymont/success",
+            "style" :
+            {
+            	"navigationBarTitleText": "支付成功",
+            	"enablePullDownRefresh": false,
+            	"navigationBarBackgroundColor":"#fff",
+            	"h5": {
+            		"scrollIndicator": "none",
+            		"titleNView": {
+            			"buttons": [ 
+            				{
+            					"float": "left", // 右边
+            					"type":"close"
+            				}
+            			]
+            		}
+            	}
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

@@ -2,20 +2,20 @@
 	<view>
 		<UniNavBar @clickRight="Show_Inf" fixed="true">
 			<!-- <block v-slot:left>
-				<uni-icons type="left" size="24" />
+				<UniIcons type="left" size="24" />
 			</block> -->
 			<view class="cart_center">
 				<view class="cart_title">购物车</view>
 				<view class="cart_bj" @click="isEdit = !isEdit">{{isEdit ? '完成':'编辑'}}</view>
 			</view>
-			<block v-slot:right>
-				<uni-icons type="chat" size="24" />
+			<block slot="right">
+				<UniIcons type="chat" size="24" />
 			</block>
 		</UniNavBar>
 
 		<view class="cart_cont">
 			<view class="cart_list" v-for="(item,index) in cart_data" :key="index">
-				<view class="cart_list_title">
+				<view class="cart_list_title" v-if="item.page_list.length != 0">
 					<checkbox class="store_checked" @click="SelectChildAll(index,item.checked)"
 						:checked="item.checked" />
 					<image class="store_icon" :src="`../../static/icon/${item.store_icon}`"></image>
@@ -27,15 +27,20 @@
 							:checked="item1.checked" :id="item1.id" />
 						<label class="store_label" :for="item1.id">
 							<image class="page_img" :src="`../../static/image/Types/${item1.com_img}`"></image>
-							<view class="page_detail">
-								<view class="page_name">{{item1.com_name}}</view>
-								<view class="page_color">颜色分类：{{item1.com_color}}</view>
-								<view class="page_dea">
-									<view class="page_pic">¥{{item1.com_price}}</view>
-									<view class="page_num">X {{item1.com_num}}</view>
+						</label>
+						<view class="page_detail">
+							<view class="page_name">{{item1.com_name}}</view>
+							<view class="page_color">颜色分类：{{item1.com_color}}</view>
+							<view class="page_dea">
+								<view class="page_pic">¥{{item1.com_price}}</view>
+								<view class="page_num" v-if="!isEdit">X {{item1.com_num}}</view>
+								<view class="page_num" v-else>
+									<Uninumberbox :min="1" :value="item1.com_num" v-model="item1.com_num"
+										background="#2979FF" color="#fff"
+										@change="(num)=> NumberChange(num,index,index1)" />
 								</view>
 							</view>
-						</label>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -48,12 +53,18 @@
 					</label>
 				</view>
 				<view class="sta_right">
-					<view class="sta_dea">
-						<view class="sta_dea_text">合计：<i>¥{{sta_data.sta_pic}}</i>
+					<template v-if="!isEdit">
+						<view class="sta_dea">
+							<view class="sta_dea_text">合计：<i>¥{{sta_data.sta_pic}}</i>
+							</view>
+							<view class="sta_dea_fre">{{sta_data.sta_freight ? '含运费':'不含运费'}}</view>
 						</view>
-						<view class="sta_dea_fre">{{sta_data.sta_freight ? '含运费':'不含运费'}}</view>
-					</view>
-					<button class="sta_an">结算({{sta_data.sta_num}})</button>
+						<button class="sta_an" @click="Open_affirm()">结算({{sta_data.sta_num}})</button>
+					</template>
+					<template v-else>
+						<button class="sta_an_add">移入收藏夹</button>
+						<button class="sta_an" @click="RemoveItem()">删除</button>
+					</template>
 				</view>
 			</view>
 		</view>
@@ -62,6 +73,8 @@
 
 <script>
 	import UniNavBar from '@/components/uni/uni-nav-bar/uni-nav-bar.vue'
+	import Uninumberbox from '@/components/uni/uni-number-box/uni-number-box.vue'
+	import UniIcons from '@/components/uni/uni-icons/uni-icons.vue'
 	import {
 		mapState
 	} from 'vuex'
@@ -73,6 +86,8 @@
 		},
 		components: {
 			UniNavBar,
+			Uninumberbox,
+			UniIcons
 		},
 		computed: {
 			...mapState({
@@ -83,17 +98,22 @@
 		watch: {
 			cart_data: {
 				handler(newVal, oldVal) {
-					let pic = 0
+					let pic = 0,
+						num = 0
 
 					newVal.forEach((item, index) => {
 						item.page_list.forEach(item1 => {
 							if (item1.checked) {
+								num++
 								pic = (item1.com_price * item1.com_num) + pic
 							}
 						})
 					})
-
-					this.$store.commit('SelectPrice', pic)
+					console.log(num);
+					this.$store.commit('SelectPrice', {
+						pic: pic,
+						num: num
+					})
 				},
 				deep: true,
 			}
@@ -106,10 +126,12 @@
 				})
 			},
 
+			// 全选
 			SelectAll(index) {
 				this.$store.commit('SelectAll', index)
 			},
 
+			// 父元素单选
 			SelectChildAll(index, code) {
 				this.$store.commit('SelectChildAll', {
 					code: code,
@@ -117,11 +139,33 @@
 				})
 			},
 
+			// 孙元素单选
 			SelectSunAll(index, index1, code) {
 				this.$store.commit('SelectSunAll', {
 					index: index,
 					Cindex: index1,
 					code: code
+				})
+			},
+
+			// 改变个数
+			NumberChange(num, index, index1) {
+				this.$store.commit('SelectUnumber', {
+					num: num,
+					index: index,
+					Cindex: index1
+				})
+			},
+
+			// 删除
+			RemoveItem() {
+				this.$store.commit('RemoveItem')
+			},
+
+			// 确认订单
+			Open_affirm() {
+				uni.navigateTo({
+					url: '/pages/cart/goods_affirm'
 				})
 			}
 		}
@@ -199,7 +243,6 @@
 	}
 
 	.store_label {
-		width: 100%;
 		height: auto;
 		display: flex;
 	}
@@ -312,6 +355,15 @@
 		background: #49bdfb;
 		color: #fff;
 		border-radius: 0;
+	}
+
+	.sta_an_add {
+		background: #000;
+		width: 300rpx;
+		height: 100%;
+		border: none;
+		border-radius: 0;
+		color: #fff;
 	}
 
 	.cart_sta {

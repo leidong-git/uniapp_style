@@ -123,7 +123,6 @@ export default {
 			let fa = state.cart_data.map((item, index) => {
 				return item.checked
 			})
-			console.log(fa);
 			state.sta_data.sta_checked = fa.every(val => val == true)
 		},
 
@@ -147,8 +146,35 @@ export default {
 		},
 
 		// 总价
-		SelectPrice(state, pic) {
-			state.sta_data.sta_pic = pic.toFixed(2)
+		SelectPrice(state, code) {
+			state.sta_data.sta_pic = code.pic.toFixed(2)
+			state.sta_data.sta_num = code.num
+		},
+
+		// 改变当前个数
+		SelectUnumber(state, code) {
+			console.log(code);
+			state.cart_data[code.index].page_list[code.Cindex].com_num = code.num
+		},
+
+		// 删除选中
+		RemoveItem(state) {
+			let data = state.cart_data.map((item, index) => {
+				let child = item.page_list.filter(item1 => {
+					if (!item1.checked) return item1
+				})
+				return {
+					...item,
+					page_list: child
+				}
+			})
+
+			console.log(data);
+			state.cart_data = data
+		},
+
+		AddItem(state, code) {
+			state.cart_data.unshift(code)
 		}
 	},
 	actions: {

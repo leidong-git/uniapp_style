@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/index/IndexSwiper":1,"components/index/NavigationIndex":1,"components/index/Recommended":1,"components/public/CommodityList":1,"components/uni/uni-nav-bar/uni-nav-bar":1,"components/uni/uni-number-box/uni-number-box":1,"components/uni/uni-nav-bar/uni-status-bar":1};
+/******/ 		var cssChunks = {"components/index/IndexSwiper":1,"components/index/NavigationIndex":1,"components/index/Recommended":1,"components/public/CommodityList":1,"components/uni/uni-icons/uni-icons":1,"components/uni/uni-nav-bar/uni-nav-bar":1,"components/uni/uni-number-box/uni-number-box":1,"components/uni/uni-nav-bar/uni-status-bar":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/index/IndexSwiper":"components/index/IndexSwiper","components/index/NavigationIndex":"components/index/NavigationIndex","components/index/Recommended":"components/index/Recommended","components/public/CommodityList":"components/public/CommodityList","components/uni/uni-nav-bar/uni-nav-bar":"components/uni/uni-nav-bar/uni-nav-bar","components/uni/uni-number-box/uni-number-box":"components/uni/uni-number-box/uni-number-box","components/uni/uni-nav-bar/uni-status-bar":"components/uni/uni-nav-bar/uni-status-bar"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/index/IndexSwiper":"components/index/IndexSwiper","components/index/NavigationIndex":"components/index/NavigationIndex","components/index/Recommended":"components/index/Recommended","components/public/CommodityList":"components/public/CommodityList","components/uni/uni-icons/uni-icons":"components/uni/uni-icons/uni-icons","components/uni/uni-nav-bar/uni-nav-bar":"components/uni/uni-nav-bar/uni-nav-bar","components/uni/uni-number-box/uni-number-box":"components/uni/uni-number-box/uni-number-box","components/uni/uni-nav-bar/uni-status-bar":"components/uni/uni-nav-bar/uni-status-bar"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

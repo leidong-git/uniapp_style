@@ -1,6 +1,6 @@
 <template>
 	<view>
-		新闻
+		登录
 	</view>
 </template>
 
